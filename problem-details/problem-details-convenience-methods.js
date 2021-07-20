@@ -1,4 +1,4 @@
-const { problemDetailsFactory } = require('./problem-details-factory');
+const { createProblemDetails } = require('./problem-details-factory');
 
 exports.createProblem = ({
   detail = null,
@@ -8,7 +8,7 @@ exports.createProblem = ({
   type = null,
   extensions = null
 } = {}) =>
-  problemDetailsFactory.createProblemDetails({
+  createProblemDetails({
     detail: detail,
     instance: instance,
     status: status,
@@ -18,7 +18,7 @@ exports.createProblem = ({
   });
 
 exports.createValidationProblem = ({ errors = null } = {}) =>
-  problemDetailsFactory.createProblemDetails({
+  createProblemDetails({
     status: 400,
     title: 'One or more validation errors occurred.',
     type: 'https://tools.ietf.org/html/rfc7231#section-6.5.1',
@@ -26,7 +26,7 @@ exports.createValidationProblem = ({ errors = null } = {}) =>
   });
 
 exports.createNotFound = () =>
-  problemDetailsFactory.createProblemDetails({
+  createProblemDetails({
     status: 404,
     title: 'Not Found',
     type: 'https://tools.ietf.org/html/rfc7231#section-6.5.4'

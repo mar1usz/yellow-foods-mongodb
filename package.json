@@ -6,14 +6,14 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
-    "debug": "^4.3.1",
+    "debug": "^4.3.2",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
-    "express-validator": "^6.11.1",
+    "express-validator": "^6.12.0",
     "first-run": "^2.0.0",
-    "mongoose": "^5.11.14",
+    "mongoose": "^5.13.3",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.7",
+    "nodemon": "^2.0.12",
     "open": "^7.4.0"
   }
 }
