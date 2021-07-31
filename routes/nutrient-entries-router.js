@@ -11,12 +11,11 @@ const router = express.Router();
 
 const nutrientEntries_route = '/foods/:food_id/nutriententries';
 router.get(nutrientEntries_route, getNutrientEntries);
-router.get(nutrientEntries_route + '/:nutrientEntry_id', getNutrientEntry);
+router.get(`${nutrientEntries_route}/:nutrientEntry_id`, getNutrientEntry);
 router.post(nutrientEntries_route, postNutrientEntry);
-router.put(nutrientEntries_route + '/:nutrientEntry_id', putNutrientEntry);
+router.put(`${nutrientEntries_route}/:nutrientEntry_id`, putNutrientEntry);
 router.delete(
-  nutrientEntries_route + '/:nutrientEntry_id',
+  `${nutrientEntries_route}/:nutrientEntry_id`,
   deleteNutrientEntry
 );
-
 module.exports = router;
